@@ -27,8 +27,8 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-:: Check if clone was successful by checking for the config dir
-if not exist "%TEMP_CLONE_DIR%\config" (
+:: Check if clone was successful by checking for the src dir
+if not exist "%TEMP_CLONE_DIR%\src" (
     echo Error: RooFlow repository clone seems incomplete. Config directory not found in temp location.
     if exist "%TEMP_CLONE_DIR%" rmdir /s /q "%TEMP_CLONE_DIR%" >nul 2>nul
     exit /b 1
@@ -41,7 +41,7 @@ set "COPY_ERROR=0"
 
 :: 1. Copy .roo directory and its contents
 echo Copying .roo directory...
-robocopy "%TEMP_CLONE_DIR%\config\.roo" "%CD%\.roo" /E /NFL /NDL /NJH /NJS /nc /ns /np
+robocopy "%TEMP_CLONE_DIR%\src\.roo" "%CD%\.roo" /E /NFL /NDL /NJH /NJS /nc /ns /np
 if %errorlevel% gtr 7 (
     echo   ERROR: Failed to copy .roo directory. Robocopy Errorlevel: %errorlevel%
     set "COPY_ERROR=1"
@@ -52,7 +52,7 @@ if %errorlevel% gtr 7 (
 :: 2. Copy .roomodes file
 if %COPY_ERROR% equ 0 (
     echo Copying .roomodes...
-    copy /Y "%TEMP_CLONE_DIR%\config\.roomodes" "%CD%\" > nul
+    copy /Y "%TEMP_CLONE_DIR%\src\.roomodes" "%CD%\" > nul
     if errorlevel 1 (
         echo   ERROR: Failed to copy .roomodes. Check source file exists and permissions.
         set "COPY_ERROR=1"
@@ -64,7 +64,7 @@ if %COPY_ERROR% equ 0 (
 :: 3. Copy insert-variables.cmd file
 if %COPY_ERROR% equ 0 (
     echo Copying insert-variables.cmd...
-    copy /Y "%TEMP_CLONE_DIR%\config\insert-variables.cmd" "%CD%\" > nul
+    copy /Y "%TEMP_CLONE_DIR%\src\insert-variables.cmd" "%CD%\" > nul
     if errorlevel 1 (
         echo   ERROR: Failed to copy insert-variables.cmd. Check source file exists and permissions.
         set "COPY_ERROR=1"

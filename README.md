@@ -8,7 +8,7 @@ This fork could also contains opinionated modifications/optimizations over RooFl
 
 <div align="center">
 
-#### Now with install scripts for [Windows](./config/install_rooflow.cmd) and [Linux/macOS](./config/install_rooflow.sh)!
+#### Now with install scripts for [Windows](./src/install_rooflow.cmd) and [Linux/macOS](./src/install_rooflow.sh)!
 
 #### [Default Mode](#install-global-default-and-boomerang-modes) and [Boomerang Mode](#install-global-default-and-boomerang-modes) are available for manual installation.
 
@@ -66,11 +66,11 @@ flowchart LR
 4. **Download the appropriate script** for your operating system:
   * **Windows (Command Prompt or PowerShell):**
   ```cmd
-  curl -L -o install_rooflow.cmd https://raw.githubusercontent.com/NamesMT/RooFlow-generic/main/config/install_rooflow.cmd
+  curl -L -o install_rooflow.cmd https://raw.githubusercontent.com/NamesMT/RooFlow-generic/main/src/install_rooflow.cmd
   ```
   * **Linux / macOS (bash/zsh):**
   ```sh
-  curl -Lo install_rooflow.sh https://raw.githubusercontent.com/NamesMT/RooFlow-generic/main/config/install_rooflow.sh
+  curl -Lo install_rooflow.sh https://raw.githubusercontent.com/NamesMT/RooFlow-generic/main/src/install_rooflow.sh
   ```
 5. **Run the downloaded script:**
   * **Windows:**

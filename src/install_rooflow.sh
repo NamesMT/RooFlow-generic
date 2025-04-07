@@ -28,12 +28,12 @@ echo "Copying specific configuration items..."
 echo "Copying .roo directory..."
 # Use -T with cp to copy contents *into* the destination if it exists,
 # but here we expect ./ to exist and ./.roo not to, so standard -r is fine.
-cp -r "$CLONE_DIR/config/.roo" ./
+cp -r "$CLONE_DIR/src/.roo" ./
 
 # 2. Copy specific config files
 echo "Copying .roomodes, insert-variables.sh..."
-cp "$CLONE_DIR/config/.roomodes" ./
-cp "$CLONE_DIR/config/insert-variables.sh" ./
+cp "$CLONE_DIR/src/.roomodes" ./
+cp "$CLONE_DIR/src/insert-variables.sh" ./
 
 # --- MODIFIED COPY SECTION END ---
 

@@ -6,13 +6,13 @@ dev/
 node_modules/
 package-lock.json
 package.json
-!config/
+!src/
 .rooignore
-!config/.rooignore
+!src/.rooignore
 .windsurfrules
 .clinerules-default
 rooflow_logo_raw.png
-!/config/default-mode/.clinerules-default
+!/src/default-mode/.clinerules-default
 output.log
 claude-code-prompt.txt
 windsurfrules.txt
