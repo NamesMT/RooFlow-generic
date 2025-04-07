@@ -25,7 +25,7 @@ To develop RooFlow, you'll need:
 
 **Project Structure:**
 
-The RooFlow project requires/consists of the following files, which you need to copy and place into the root directory:
+The RooFlow development requires/consists of the following files, which you need to copy from `src` and place into the root directory:
 
 * `.roo/`: A directory containing the system prompts.
   * `system-prompt-architect`: System prompt for Architect mode.
@@ -35,8 +35,6 @@ The RooFlow project requires/consists of the following files, which you need to 
   * `system-prompt-test`: System prompt for Test mode.
 * `.rooignore`: So Roo doesn't ignore memory-bank/ if it's gitignored.
 * `.roomodes`: Defines the custom Test mode.
-* `README.md`: This file.
-* `projectBrief.md`: Optional project brief.
 
 **Memory Bank:**
 
