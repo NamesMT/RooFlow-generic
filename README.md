@@ -4,6 +4,15 @@ This is a fork of [RooFlow](https://github.com/GreatScottyMac/RooFlow), this for
 
 This fork could also contains opinionated modifications/optimizations over RooFlow, so take that in mind.
 
+#### Current notable changes (vs `v0.3.5`):
+  + Documents heavily revised.
+  + Restructures: 
+    + `config` is now `src`.
+    + Custom RooFlow modes are now defined in `.roocodes`
+      + This is more intuitive:
+        + Better DX/UX (Users simply open the project and proceed)
+        + Adding RooFlow modes as `global` scope is not gonna work anyways, as custom system prompt files are needed.
+
 ---
 
 <div align="center">
