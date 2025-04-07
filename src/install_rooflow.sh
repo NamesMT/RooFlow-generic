@@ -5,21 +5,13 @@ set -e
 
 echo "--- Starting RooFlow config setup ---"
 
-# Check for Git command
-if ! command -v git &> /dev/null; then
-    echo "Error: git is not found in your PATH."
-    echo "Please install Git using your distribution's package manager (e.g., sudo apt install git, sudo yum install git)."
-    exit 1
-else
-    echo "Found git executable."
-fi
-
 # Define a temporary directory name for clarity
-CLONE_DIR="RooFlow_temp_$$" # Using $$ for process ID to add uniqueness
+TEMP_EXTRACT_DIR=".tmp-RooFlow_$$/" # Using $$ for process ID to add uniqueness
 
-# Clone the repository (shallow clone for efficiency)
-echo "Cloning RooFlow repository into $CLONE_DIR..."
-git clone --depth 1 https://github.com/GreatScottyMac/RooFlow "$CLONE_DIR"
+# Download the latest release
+echo "Cloning RooFlow repository into $TEMP_EXTRACT_DIR..."
+mkdir $TEMP_EXTRACT_DIR
+wget https://github.com/NamesMT/RooFlow-generic/releases/latest/download/dist.tar.gz -O- | tar -xz -C $TEMP_EXTRACT_DIR
 
 # --- MODIFIED COPY SECTION START ---
 echo "Copying specific configuration items..."
@@ -28,27 +20,18 @@ echo "Copying specific configuration items..."
 echo "Copying .roo directory..."
 # Use -T with cp to copy contents *into* the destination if it exists,
 # but here we expect ./ to exist and ./.roo not to, so standard -r is fine.
-cp -r "$CLONE_DIR/src/.roo" ./
+cp -r "$TEMP_EXTRACT_DIR/.roo" ./
 
 # 2. Copy specific config files
-echo "Copying .roomodes, insert-variables.sh..."
-cp "$CLONE_DIR/src/.roomodes" ./
-cp "$CLONE_DIR/src/insert-variables.sh" ./
+echo "Copying .roomodes..."
+cp "$TEMP_EXTRACT_DIR/.roomodes" ./
 
 # --- MODIFIED COPY SECTION END ---
 
 
-# Make the setup script executable
-echo "Setting permissions for insert-variables.sh..."
-chmod +x insert-variables.sh
-
-
 # --- MODIFIED CLEANUP SECTION START ---
-echo "Cleaning up temporary clone directory ($CLONE_DIR)..."
-rm -rf "$CLONE_DIR" # Remove the cloned repo directory
-
-# Removed rm -f insert-variables.cmd   (never copied)
-# Removed rm -rf default-mode          (never copied)
+echo "Cleaning up .tmp directory..."
+rm -r ".tmp"
 # --- MODIFIED CLEANUP SECTION END ---
 
 
@@ -57,18 +40,6 @@ if [ ! -d ".roo" ]; then
     echo "Error: .roo directory not found after specific copy. Setup failed."
     exit 1
 fi
-if [ ! -f "insert-variables.sh" ]; then
-     echo "Error: insert-variables.sh not found after specific copy. Setup failed."
-     exit 1
-fi
-
-
-# Run the setup script
-echo "Running insert-variables.sh..."
-./insert-variables.sh
-
-echo "insert-variables.sh completed successfully. Removing it..."
-rm -f insert-variables.sh
 
 
 echo "Scheduling self-deletion of install_rooflow.sh..."
