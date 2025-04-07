@@ -19,8 +19,6 @@ This fork could also contains opinionated modifications/optimizations over RooFl
 
 #### Now with install scripts for [Windows](./src/install_rooflow.cmd) and [Linux/macOS](./src/install_rooflow.sh)!
 
-#### [Default Mode](#install-global-default-and-boomerang-modes) and [Boomerang Mode](#install-global-default-and-boomerang-modes) are available for manual installation.
-
 ##### For MCP server use in RooFlow custom modes, there is a `MCP_SERVERS_PLACEHOLDER` in the `system-prompt-[mode]` files where connected MCP servers will need to be inserted.
 
 <br>

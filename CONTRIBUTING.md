@@ -63,6 +63,10 @@ The `memory-bank/` directory is created automatically by RooFlow. Do *not* creat
 * **Small, Focused Changes:** Prefer smaller, focused pull requests over large, monolithic ones.
 * **Tests:** Include tests for any new functionality or bug fixes.
 
+## Some Notes:
+
+Currently, the `custom-instructions-{slug}.yml` files and the props in `.roomodes` requires duplication work between the two, in the future, we would automatically generate the `.roomodes` file when doing a release CI, for now please take note and manually sync the content of those files.
+
 ## Code of Conduct
 
 Please be respectful and constructive in all interactions.

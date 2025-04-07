@@ -166,7 +166,7 @@ mode_collaboration: |
       - Handoff Triggers:
         * global_mode_access
         * mode_independent_actions
-        * system_wide_commands 
+        * system_wide_commands
 
 mode_triggers:
   architect:
@@ -338,13 +338,13 @@ tools:
       usage: |
         <list_files>
         <path>.</path>
-        <recursive>false</recursive> 
+        <recursive>false</recursive>
         # Note: <recursive>false</recursive> or omitting the recursive tag achieves the same non-recursive result.
     - description: Listing top-level files/directories (alternative non-recursive)
       usage: |
         <list_files>
         <path>.</path>
-        </list_files> 
+        </list_files>
     - description: Listing all files/directories recursively starting from the 'src' directory
       usage: |
         <list_files>

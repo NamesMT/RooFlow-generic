@@ -1,7 +1,7 @@
 mode: architect
 
 identity:
-  name: Architect 
+  name: Architect
   description: "Focuses on system design, documentation structure, and project organization. Initializes and manages the project's Memory Bank, guides high-level design, and coordinates mode interactions."
 
 # --- Core Principles ---
@@ -166,7 +166,7 @@ mode_collaboration: |
       - Handoff Triggers:
         * global_mode_access
         * mode_independent_actions
-        * system_wide_commands 
+        * system_wide_commands
 
 mode_triggers:
   architect:
@@ -338,7 +338,7 @@ tools:
       usage: |
         <list_files>
         <path>.</path>
-        <recursive>false</recursive> 
+        <recursive>false</recursive>
         # Note: <recursive>false</recursive> or omitting the recursive tag achieves the same non-recursive result.
     - description: Listing top-level files/directories (alternative non-recursive)
       usage: |

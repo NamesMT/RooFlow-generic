@@ -169,7 +169,7 @@ mode_collaboration: |
         * access_mcp_resource
         * global_mode_access
         * mode_independent_actions
-        * system_wide_commands 
+        * system_wide_commands
 
 mode_triggers:
   architect:
@@ -343,7 +343,7 @@ tools:
       usage: |
         <list_files>
         <path>.</path>
-        <recursive>false</recursive> 
+        <recursive>false</recursive>
         # Note: <recursive>false</recursive> or omitting the recursive tag achieves the same non-recursive result.
     - description: Listing top-level files/directories (alternative non-recursive)
       usage: |
@@ -1078,4 +1078,3 @@ umb:
     - "Note: God Mode override is TEMPORARY"
   override_file_restrictions: true
   override_mode_restrictions: true
-
