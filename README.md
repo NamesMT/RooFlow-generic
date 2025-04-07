@@ -1,8 +1,16 @@
+### Fork information:
+
+This is a fork of [RooFlow](https://github.com/GreatScottyMac/RooFlow), this fork aims to be more generic, without specifying system informations. So that it could be used in collaborated projects (OSS).
+
+This fork could also contains opinionated modifications/optimizations over RooFlow, so take that in mind.
+
+---
+
 <div align="center">
 
-#### Now with install scripts for [Windows](https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/install_rooflow.cmd) and [Linux/macOS](https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/install_rooflow.sh)!
+#### Now with install scripts for [Windows](./config/install_rooflow.cmd) and [Linux/macOS](./config/install_rooflow.sh)!
 
-#### [Default Mode](https://github.com/GreatScottyMac/RooFlow#install-global-default-and-boomerang-modes) and [Boomerang Mode](https://github.com/GreatScottyMac/RooFlow#install-global-default-and-boomerang-modes) are available for manual installation.
+#### [Default Mode](#install-global-default-and-boomerang-modes) and [Boomerang Mode](#install-global-default-and-boomerang-modes) are available for manual installation.
 
 ##### For MCP server use in RooFlow custom modes, there is a `MCP_SERVERS_PLACEHOLDER` in the `system-prompt-[mode]` files where connected MCP servers will need to be inserted.
 
@@ -12,13 +20,10 @@
 
 <br>
 
-# RooFlow 
-<img src="https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/rooflow_logo.png" alt="RooFlow Logo" width="300"/>
+# RooFlow *generic*
+<img src="./rooflow_logo.png" alt="RooFlow Logo" width="300"/>
 
-**Persistent Project Context and Streamlined AI-Assisted Development**
-
-[![Roo Code](https://img.shields.io/badge/VS%20Code-Extension-blue.svg)](https://github.com/RooVetGit/Roo-Code)
-[![RooFlow](https://img.shields.io/badge/View%20on-GitHub-lightgrey.svg)](https://github.com/GreatScottyMac/RooFlow)
+**Persistent Project Context and Streamlined AI-Assisted Development for [Roo Code](https://github.com/RooVetGit/Roo-Code)**
 
 </div>
 
@@ -62,11 +67,11 @@ flowchart LR
    4.  **Download the appropriate script** for your operating system:
        * **Windows (Command Prompt or PowerShell):**
         ```bash
-        curl -L -o install_rooflow.cmd https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/install_rooflow.cmd
+        curl -L -o install_rooflow.cmd https://raw.githubusercontent.com/NamesMT/RooFlow-generic/main/config/install_rooflow.cmd
         ```   
        *   **Linux / macOS (bash/zsh):**
         ```bash 
-        curl -Lo install_rooflow.sh https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/install_rooflow.sh
+        curl -Lo install_rooflow.sh https://raw.githubusercontent.com/NamesMT/RooFlow-generic/main/config/install_rooflow.sh
         ```
 
    5.  **Run the downloaded script:**
@@ -92,13 +97,13 @@ flowchart LR
 
    1.  **Open Roo Code Settings:** Click the Roo Code icon in the VS Code Activity Bar, then click the "Prompts" icon (looks like a book/document - Step 1 in image below).
     <br> 
-    <img src="https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/default-mode/prompt-settings.png" alt="Prompt Settings Icon" width="200"/>
+    <img src="./config/default-mode/prompt-settings.png" alt="Prompt Settings Icon" width="200"/>
 
    2.  **Add New Mode:** Scroll down to the "Modes" section and click the "+" icon (Step 2)
 
    3.  **Enter Name:** In the "Create New Mode" view, enter the mode name (`Default` or `Boomerang`) in the "Name" field (Step 3).
     <br> <!-- Optional: Add a line break for spacing -->
-    <img src="https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/default-mode/create-global-mode.png" alt="Create Mode View" width="200"/>
+    <img src="./config/default-mode/create-global-mode.png" alt="Create Mode View" width="200"/>
 
    4.  **Slug:** The "Slug" field should automatically populate with `default` or `boomerang` (Step 4).
 
@@ -761,7 +766,7 @@ The command "Update Memory Bank" or "UMB" can be given at any time to update the
 
 ## Contributing
 
-Contributions to RooFlow are welcome! Please see the [CONTRIBUTING.md](https://github.com/GreatScottyMac/RooFlow/blob/main/CONTRIBUTING.md) file (you'll need to create this) for guidelines.
+Contributions to RooFlow are welcome! Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) file (you'll need to create this) for guidelines.
 
 ## License
-  [Apache 2.0](https://github.com/GreatScottyMac/RooFlow/blob/main/LICENSE>)
+  [Apache 2.0](./LICENSE>)
