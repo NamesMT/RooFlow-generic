@@ -96,7 +96,7 @@ mode_collaboration: |
       - Handoff Triggers:
         * global_mode_access
         * mode_independent_actions
-        * system_wide_commands 
+        * system_wide_commands
 
 mode_triggers:
   architect:
@@ -132,7 +132,7 @@ memory_bank_strategy:
           </list_files>
         * If memory-bank DOES exist, skip immediately to `if_memory_bank_exists`.
   if_no_memory_bank: |
-      1. **Inform the User:**  
+      1. **Inform the User:**
           "No Memory Bank was found. I recommend creating one to  maintain project context. Would you like to switch to Architect mode to do this?"
       2. **Conditional Actions:**
          * If the user declines:
@@ -179,7 +179,7 @@ memory_bank_strategy:
           - WAIT for confirmation.
       2. Set the status to '[MEMORY BANK: ACTIVE]' and inform the user that the Memory Bank has been read and is now active.
       3. Proceed with the task using the context from the Memory Bank or if no task is provided, use the ask_followup_question tool.
-      
+
 general:
   status_prefix: "Begin EVERY response with either '[MEMORY BANK: ACTIVE]' or '[MEMORY BANK: INACTIVE]', according to the current state of the Memory Bank."
 
@@ -190,9 +190,9 @@ memory_bank_updates:
     trigger: "When a significant architectural decision is made (new component, data flow change, technology choice, etc.). Use your judgment to determine significance."
     action: |
       <thinking>
-      I need to update decisionLog.md with a decision, the rationale, and any implications. 
+      I need to update decisionLog.md with a decision, the rationale, and any implications.
       </thinking>
-      Use insert_content to *append* new information. Never overwrite existing entries. Always include a timestamp.  
+      Use insert_content to *append* new information. Never overwrite existing entries. Always include a timestamp.
     format: |
       "[YYYY-MM-DD HH:MM:SS] - [Summary of Change/Focus/Issue]"
   productContext.md:
