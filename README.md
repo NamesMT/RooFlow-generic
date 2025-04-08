@@ -14,7 +14,8 @@ This fork could also contains opinionated modifications/optimizations over RooFl
         + Adding these modes as `global` scope is not gonna work anyways, as custom system prompt files for other modes are needed.
   + Use a different Boomerang mode that is more optimized.
   + More optimzed install script that installs latest release-ready version instead of HEAD, also removes `git` requirement
-  + Is generic!, feel free to use it in a collaborated repo, though
+  + Is generic!, feel free to use it in a collaborated repo.
+  + Of courses, other minor changes and improvements
 
 ---
 
