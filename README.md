@@ -1,17 +1,20 @@
 ### Fork information:
 
-This is a fork of [RooFlow](https://github.com/GreatScottyMac/RooFlow), this fork aims to be more generic, without specifying system informations. So that it could be used in collaborated projects (OSS).
+This is a fork of [RooFlow](https://github.com/GreatScottyMac/RooFlow), this fork aims to be more generic, without requirement for machine-specific variable setup. So that it could be used in collaborated projects (OSS).
 
 This fork could also contains opinionated modifications/optimizations over RooFlow, so take that in mind.
 
-#### Current notable changes (vs `v0.3.5`):
+#### Current notable changes (vs `v0.3.6`):
   + Documents heavily revised.
   + Restructures: 
     + `config` is now `src`.
-    + Custom RooFlow modes are now defined in `.roocodes`
+    + `Default` + `Boomerang` modes are now defined in `.roocodes` and
       + This is more intuitive:
         + Better DX/UX (Users simply open the project and proceed)
-        + Adding RooFlow modes as `global` scope is not gonna work anyways, as custom system prompt files are needed.
+        + Adding these modes as `global` scope is not gonna work anyways, as custom system prompt files for other modes are needed.
+  + Use a different Boomerang mode that is more optimized.
+  + More optimzed install script that installs latest release-ready version instead of HEAD, also removes `git` requirement
+  + Is generic!, feel free to use it in a collaborated repo, though
 
 ---
 

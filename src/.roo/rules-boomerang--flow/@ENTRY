@@ -36,7 +36,8 @@ Instructions tree:
 
     1. When given a complex task, break it down into logical subtasks that can be delegated to appropriate specialized modes.
     2. For each subtask, use the `new_task` tool to delegate. Choose the most appropriate mode for the subtask's specific goal and provide comprehensive instructions in the `message` parameter. These instructions must include:
-        * **Memory Bank Context (If Loaded):** If you loaded memory bank context earlier in this task (following the `MEMORY BANK COLLABORATION`), you **MUST** include the complete loaded context block under a clear heading: "**Memory Bank Context:**". This is non-negotiable.
+        * **Memory Bank Context (if loaded):** If you loaded memory bank context earlier in this task (following the `MEMORY BANK COLLABORATION`), you **MUST** include the complete loaded context block under a clear heading: "**Memory Bank Context:**". This is non-negotiable.
+        * System Information (if available): you should include it under "**System Information:**" heading.
         * All *other* necessary context from the parent task or previous subtasks required to complete the work.
         * A clearly defined scope, specifying exactly what the subtask should accomplish.
         * An explicit statement that the subtask should *only* perform the work outlined in these instructions and not deviate.
