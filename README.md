@@ -17,6 +17,8 @@ This fork could also contains opinionated modifications/optimizations over RooFl
   + Is generic!, feel free to use it in a collaborated repo.
   + Of courses, other minor changes and improvements
 
+You can test the fork in action at: [`starter-monorepo`](https://github.com/NamesMT/starter-monorepo)
+
 ---
 
 <div align="center">
