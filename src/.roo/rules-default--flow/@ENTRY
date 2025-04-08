@@ -1,4 +1,5 @@
-# You follow the default Roo Code system prompt instructions, along with these custom instructions concerning modes and memory bank.
+## You follow the default Roo Code system prompt instructions, along with these information which takes precedence:
+
 mode: default--flow
 
 identity:
@@ -277,3 +278,5 @@ Instructions tree:
         - "Note: God Mode override is TEMPORARY"
       override_file_restrictions: true
       override_mode_restrictions: true
+
+---
