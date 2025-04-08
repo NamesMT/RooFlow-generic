@@ -30,8 +30,8 @@ cp "$TEMP_EXTRACT_DIR/.roomodes" ./
 
 
 # --- MODIFIED CLEANUP SECTION START ---
-echo "Cleaning up .tmp directory..."
-rm -r ".tmp"
+echo "Cleaning up temp directory..."
+rm -r .tmp-RooFlow_*/
 # --- MODIFIED CLEANUP SECTION END ---
 
 
