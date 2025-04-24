@@ -1,3 +1,6 @@
+## Important note:
+The original RooFlow currently as of writing and this fork is not compatible with the latest Roo Code versions, so, PLEASE DON'T install this, if I have any new suggestion for similar mode systems, I will adapt them at [starter-monorepo](https://github.com/NamesMT/starter-monorepo)
+
 ### Fork information:
 
 This is a fork of [RooFlow](https://github.com/GreatScottyMac/RooFlow), this fork aims to be more generic, without requirement for machine-specific variable setup. So that it could be used in collaborated projects (OSS).
